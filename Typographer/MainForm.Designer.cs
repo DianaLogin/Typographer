@@ -30,28 +30,28 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(typograph_Form));
             this.panel1 = new System.Windows.Forms.Panel();
-            this.logo_picture = new System.Windows.Forms.PictureBox();
-            this.input_textbox = new System.Windows.Forms.RichTextBox();
-            this.updated_textbox = new System.Windows.Forms.RichTextBox();
-            this.settings_picture = new System.Windows.Forms.PictureBox();
-            this.about_picture = new System.Windows.Forms.PictureBox();
-            this.theme_picture = new System.Windows.Forms.PictureBox();
-            this.arrow_picture = new System.Windows.Forms.PictureBox();
+            this.copy_btn = new System.Windows.Forms.Button();
             this.typograph_btn = new System.Windows.Forms.Button();
-            this.clear_btn = new System.Windows.Forms.Button();
+            this.arrow_picture = new System.Windows.Forms.PictureBox();
+            this.theme_picture = new System.Windows.Forms.PictureBox();
+            this.about_picture = new System.Windows.Forms.PictureBox();
+            this.settings_picture = new System.Windows.Forms.PictureBox();
+            this.updated_textbox = new System.Windows.Forms.RichTextBox();
+            this.input_textbox = new System.Windows.Forms.RichTextBox();
+            this.logo_picture = new System.Windows.Forms.PictureBox();
             this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
             this.panel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.logo_picture)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.settings_picture)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.about_picture)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.theme_picture)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.arrow_picture)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.theme_picture)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.about_picture)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.settings_picture)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.logo_picture)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.Beige;
-            this.panel1.Controls.Add(this.clear_btn);
+            this.panel1.Controls.Add(this.copy_btn);
             this.panel1.Controls.Add(this.typograph_btn);
             this.panel1.Controls.Add(this.arrow_picture);
             this.panel1.Controls.Add(this.theme_picture);
@@ -63,50 +63,15 @@
             this.panel1.Controls.Add(this.flowLayoutPanel1);
             resources.ApplyResources(this.panel1, "panel1");
             this.panel1.Name = "panel1";
-            this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
             this.panel1.Resize += new System.EventHandler(this.panel1_Resize);
             // 
-            // logo_picture
+            // copy_btn
             // 
-            resources.ApplyResources(this.logo_picture, "logo_picture");
-            this.logo_picture.Name = "logo_picture";
-            this.logo_picture.TabStop = false;
-            this.logo_picture.Click += new System.EventHandler(this.pictureBox1_Click);
-            // 
-            // input_textbox
-            // 
-            resources.ApplyResources(this.input_textbox, "input_textbox");
-            this.input_textbox.Name = "input_textbox";
-            // 
-            // updated_textbox
-            // 
-            resources.ApplyResources(this.updated_textbox, "updated_textbox");
-            this.updated_textbox.Name = "updated_textbox";
-            // 
-            // settings_picture
-            // 
-            resources.ApplyResources(this.settings_picture, "settings_picture");
-            this.settings_picture.Name = "settings_picture";
-            this.settings_picture.TabStop = false;
-            this.settings_picture.Click += new System.EventHandler(this.pictureBox2_Click);
-            // 
-            // about_picture
-            // 
-            resources.ApplyResources(this.about_picture, "about_picture");
-            this.about_picture.Name = "about_picture";
-            this.about_picture.TabStop = false;
-            // 
-            // theme_picture
-            // 
-            resources.ApplyResources(this.theme_picture, "theme_picture");
-            this.theme_picture.Name = "theme_picture";
-            this.theme_picture.TabStop = false;
-            // 
-            // arrow_picture
-            // 
-            resources.ApplyResources(this.arrow_picture, "arrow_picture");
-            this.arrow_picture.Name = "arrow_picture";
-            this.arrow_picture.TabStop = false;
+            this.copy_btn.BackColor = System.Drawing.Color.OldLace;
+            resources.ApplyResources(this.copy_btn, "copy_btn");
+            this.copy_btn.Name = "copy_btn";
+            this.copy_btn.UseVisualStyleBackColor = false;
+            this.copy_btn.Click += new System.EventHandler(this.copy_btn_Click_1);
             // 
             // typograph_btn
             // 
@@ -116,13 +81,50 @@
             this.typograph_btn.UseVisualStyleBackColor = false;
             this.typograph_btn.Click += new System.EventHandler(this.typograph_btn_Click);
             // 
-            // clear_btn
+            // arrow_picture
             // 
-            this.clear_btn.BackColor = System.Drawing.Color.OldLace;
-            resources.ApplyResources(this.clear_btn, "clear_btn");
-            this.clear_btn.Name = "clear_btn";
-            this.clear_btn.UseVisualStyleBackColor = false;
-            this.clear_btn.Click += new System.EventHandler(this.button1_Click_1);
+            resources.ApplyResources(this.arrow_picture, "arrow_picture");
+            this.arrow_picture.Name = "arrow_picture";
+            this.arrow_picture.TabStop = false;
+            // 
+            // theme_picture
+            // 
+            resources.ApplyResources(this.theme_picture, "theme_picture");
+            this.theme_picture.Name = "theme_picture";
+            this.theme_picture.TabStop = false;
+            this.theme_picture.Click += new System.EventHandler(this.theme_picture_Click);
+            // 
+            // about_picture
+            // 
+            resources.ApplyResources(this.about_picture, "about_picture");
+            this.about_picture.Name = "about_picture";
+            this.about_picture.TabStop = false;
+            this.about_picture.Click += new System.EventHandler(this.about_picture_Click);
+            // 
+            // settings_picture
+            // 
+            resources.ApplyResources(this.settings_picture, "settings_picture");
+            this.settings_picture.Name = "settings_picture";
+            this.settings_picture.TabStop = false;
+            this.settings_picture.Click += new System.EventHandler(this.settings_picture_Click);
+            // 
+            // updated_textbox
+            // 
+            this.updated_textbox.BackColor = System.Drawing.Color.Azure;
+            resources.ApplyResources(this.updated_textbox, "updated_textbox");
+            this.updated_textbox.Name = "updated_textbox";
+            // 
+            // input_textbox
+            // 
+            this.input_textbox.BackColor = System.Drawing.Color.Azure;
+            resources.ApplyResources(this.input_textbox, "input_textbox");
+            this.input_textbox.Name = "input_textbox";
+            // 
+            // logo_picture
+            // 
+            resources.ApplyResources(this.logo_picture, "logo_picture");
+            this.logo_picture.Name = "logo_picture";
+            this.logo_picture.TabStop = false;
             // 
             // flowLayoutPanel1
             // 
@@ -136,11 +138,11 @@
             this.Controls.Add(this.panel1);
             this.Name = "typograph_Form";
             this.panel1.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.logo_picture)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.settings_picture)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.about_picture)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.theme_picture)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.arrow_picture)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.theme_picture)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.about_picture)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.settings_picture)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.logo_picture)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -156,7 +158,7 @@
         private System.Windows.Forms.PictureBox theme_picture;
         private System.Windows.Forms.PictureBox arrow_picture;
         private System.Windows.Forms.Button typograph_btn;
-        private System.Windows.Forms.Button clear_btn;
+        private System.Windows.Forms.Button copy_btn;
         private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel1;
     }
 }
