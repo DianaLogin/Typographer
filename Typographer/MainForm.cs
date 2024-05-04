@@ -67,7 +67,7 @@ namespace Typographer
             MessageBox.Show("Текст успешно скопирован.");
         }
 
-        private static string Every_Second_Letter_Upper(ref string text)
+        public static string Every_Second_Letter_Upper(ref string text)
         {
             StringBuilder sb = new StringBuilder(text.Length);
             for (int i = 0; i < text.Length; i++)
@@ -109,30 +109,30 @@ namespace Typographer
             return quotes;
         }
 
-        private static string Add_Non_Breaking_Space(ref string text)
+        public static string Add_Non_Breaking_Space(ref string text)
         {
             string updated_text = Regex.Replace(text, @"(\p{L})(\d+)", "$1 $2");
             updated_text = Regex.Replace(text, @"\s+", " ");
             return Regex.Replace(text, @"(\p{L})(\d+)|(\p{L}+)", "$1$2 $3");
         }
 
-        private static string Replace_Ellipsis(ref string text)
+        public static string Replace_Ellipsis(ref string text)
         {
             return Regex.Replace(text, @"\.\.\.", "…");
         }
 
-        private static string Replace_Plus_Minus(ref string text)
+        public static string Replace_Plus_Minus(ref string text)
         {
             return Regex.Replace(text, @"\+\-", "±");
         }
 
-        private static string Replace_Quotes(ref string text)
+        public static string Replace_Quotes(ref string text)
         {
             return Regex.Replace(text, @"""([^""]*)""", "«$1»");
         }
 
 
-        private static string Replace_Dash_To_Minus(ref string text)
+        public static string Replace_Dash_To_Minus(ref string text)
         {
             string updatedText = Regex.Replace(text, @"(-\d+)", match => "−" + match.Groups[1].Value);
                

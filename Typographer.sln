@@ -5,6 +5,8 @@ VisualStudioVersion = 17.7.34202.233
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Typographer", "Typographer\Typographer.csproj", "{219C3B5F-0EFF-4B22-BC9C-D78CA745BBFA}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Unit-Tests", "Unit-Tests\Unit-Tests.csproj", "{C4907836-CBF2-4F34-B47B-14D34C7394F8}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,6 +17,10 @@ Global
 		{219C3B5F-0EFF-4B22-BC9C-D78CA745BBFA}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{219C3B5F-0EFF-4B22-BC9C-D78CA745BBFA}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{219C3B5F-0EFF-4B22-BC9C-D78CA745BBFA}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C4907836-CBF2-4F34-B47B-14D34C7394F8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C4907836-CBF2-4F34-B47B-14D34C7394F8}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C4907836-CBF2-4F34-B47B-14D34C7394F8}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C4907836-CBF2-4F34-B47B-14D34C7394F8}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
