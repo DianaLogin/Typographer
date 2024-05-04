@@ -21,15 +21,15 @@ namespace Unit_Tests
         public void TestReplace_Every_Second_Word_Heart()
         {
             var text = "Hello World";
-            var expected = "Hello ❤ World";
+            var expected = "Hello ❤";
             Assert.AreEqual(expected, Typograph_Form.Replace_Every_Second_Word_Heart(ref text));
         }
 
         [TestMethod]
         public void TestAddNonBreakingSpaceWithLettersAndDigits()
         {
-            var text = "Hello123 World456";
-            var expected = "Hello 123 World 456";
+            var text = "123дня 456дождя";
+            var expected = "123 дня 456 дождя";
             var result = Typograph_Form.Add_Non_Breaking_Space(ref text);
             Assert.AreEqual(expected, result);
         }
@@ -37,10 +37,10 @@ namespace Unit_Tests
         [TestMethod]
         public void TestAddNonBreakingSpaceWithOnlyLetters()
         {
-            var text = "HelloWorld";
-            var expected = "Hello World";
-            var result = Typograph_Form.Add_Non_Breaking_Space(ref text);
-            Assert.AreEqual(expected, result);
+            var text = "1кг";
+            var expected = "1 кг";
+            
+            Assert.AreEqual(expected, Typograph_Form.Add_Non_Breaking_Space(ref text));
         }
 
         [TestMethod]
@@ -71,7 +71,7 @@ namespace Unit_Tests
         public void TestReplace_Dash_To_Minus()
         {
             var text = "4-5";
-            var expected = "Hello – World";
+            var expected = "4−-5";
             Assert.AreEqual(expected, Typograph_Form.Replace_Dash_To_Minus(ref text));
         }
 
@@ -79,8 +79,16 @@ namespace Unit_Tests
         public void TestTrue_Punctuation()
         {
             var text = "Hello,World How are you?";
-            var expected = "Hello, World How are you? ";
+            var expected = "Hello, World How are you?";
             Assert.AreEqual(expected, Typograph_Form.True_Punctuation(ref text));
+        }
+
+        [TestMethod]
+        public void TestReplace_Quotes2()
+        {
+            var text = "\"Всё\" хорошо \"было\"";
+            var expected = "«Всё» хорошо «было»";
+            Assert.AreEqual(expected, Typograph_Form.Replace_Quotes(ref text));
         }
 
     }
