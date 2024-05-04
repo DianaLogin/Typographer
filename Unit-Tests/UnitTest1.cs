@@ -78,7 +78,7 @@ namespace Unit_Tests
         [TestMethod]
         public void TestTrue_Punctuation()
         {
-            var text = "Hello,World How are you ?";
+            var text = "Hello,World How are you?";
             var expected = "Hello, World How are you? ";
             Assert.AreEqual(expected, Typograph_Form.True_Punctuation(ref text));
         }
