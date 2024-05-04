@@ -16,7 +16,7 @@ namespace Typographer
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new typograph_Form());
+            Application.Run(new Typograph_Form());
         }
     }
 }
